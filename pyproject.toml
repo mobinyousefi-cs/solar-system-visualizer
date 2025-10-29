@@ -1,0 +1,13 @@
+[build-system] requires = ["setuptools>=68", "wheel"] build-backend = "setuptools.build_meta"
+
+[project] name = "solar-system-visualizer" version = "0.1.0" description = "2D Solar System Visualizer with Pygame" readme = "README.md" authors = [{ name = "Mobin Yousefi", email = "" }] license = { file = "LICENSE" } requires-python = ">=3.10" dependencies = [ "pygame>=2.3", ]
+
+[project.urls] Homepage = "https://github.com/mobinyousefi-cs/solar-system-visualizer"
+
+[tool.setuptools] package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find] where = ["src"]
+
+[tool.ruff] line-length = 100 select = ["E", "F", "I", "UP", "W"] ignore = []
+
+[tool.pytest.ini_options] addopts = "-q"
